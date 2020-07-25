@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">CodeLabTrial_ch2</string>
+    <string name="app_name">Two Activities</string>
+    <string name="button_main">Send</string>
 </resources>
