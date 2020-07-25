@@ -4,6 +4,7 @@
     <string name="button_main">Send</string>
     <string name="button_second">Reply</string>
     <string name="text_header">Message Received</string>
+    <string name="reply_header">Reply Received</string>
     <string name="editText_main">Enter Your Message Here</string>
     <string name="editText_second">Enter Your Reply Here</string>
 </resources>
