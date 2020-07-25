@@ -18,6 +18,12 @@ public class SecondActivity extends AppCompatActivity {
         setContentView(R.layout.activity_second);
         mReply = findViewById(R.id.editText_second);
         Intent intent = getIntent();
+        if (intent != null) {
+            showMessage(intent);
+        }
+    }
+
+    private void showMessage(Intent intent) {
         String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
         TextView textView = findViewById(R.id.text_message);
         textView.setText(message);
