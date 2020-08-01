@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
         android:onClick="openLocation"
-        android:text="@string/button_uri" />
+        android:text="@string/button_loc" />
 
     <EditText
         android:id="@+id/share_edittext"
@@ -48,5 +48,5 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
         android:onClick="shareText"
-        android:text="@string/button_uri" />
+        android:text="@string/button_share" />
 </LinearLayout>
