@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CodeLabTrial_ch2</string>
+    <string name="app_name">Intent Thrower</string>
 
     <string name="edittext_uri">https://developer.android.com/</string>
     <string name="button_uri">Open Website</string>
