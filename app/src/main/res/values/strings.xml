@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CodeLabTrial_ch2</string>
+    <string name="app_name">Intent Receiver</string>
 
     <string name="uri_label">URI: </string>
 </resources>
