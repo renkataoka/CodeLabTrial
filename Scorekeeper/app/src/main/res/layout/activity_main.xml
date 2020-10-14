@@ -24,7 +24,7 @@
 
         <TextView
             android:id="@+id/team_1"
-            style="@style/ScoreText"
+            style="@style/TeamText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -68,7 +68,7 @@
 
         <TextView
             android:id="@+id/team_2"
-            style="@style/ScoreText"
+            style="@style/TeamText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
