@@ -5,6 +5,8 @@ import android.widget.TextView;
 
 import java.lang.ref.WeakReference;
 
+import static android.net.wifi.WifiConfiguration.Status.strings;
+
 public class FetchBook extends AsyncTask<String, Void, String> {
     private WeakReference<TextView> mTitleText;
     private WeakReference<TextView> mAuthorText;
@@ -16,7 +18,7 @@ public class FetchBook extends AsyncTask<String, Void, String> {
 
     @Override
     protected String doInBackground(String... string) {
-        return null;
+        return NetworkUtils.getBookInfo(strings[0]);
     }
 
     @Override
