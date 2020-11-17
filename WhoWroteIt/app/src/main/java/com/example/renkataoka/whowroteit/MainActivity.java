@@ -3,6 +3,8 @@ package com.example.renkataoka.whowroteit;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
@@ -33,8 +35,25 @@ public class MainActivity extends AppCompatActivity {
         if (inputMethodManager != null) {
             inputMethodManager.hideSoftInputFromWindow(view.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
         }
-        new FetchBook(mTitleText, mAuthorText).execute(queryString);
-        mAuthorText.setText("");
-        mTitleText.setText(R.string.loading);
+        // Get the network state.
+        ConnectivityManager connMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo networkInfo = null;
+        if (connMgr != null) {
+            networkInfo = connMgr.getActiveNetworkInfo();
+        }
+        // Check if the network connection exists, the network is connected, and a query string is available.
+        if (networkInfo != null && networkInfo.isConnected()) {
+            if (queryString.length() != 0) {
+                new FetchBook(mTitleText, mAuthorText).execute(queryString);
+                mAuthorText.setText("");
+                mTitleText.setText(R.string.loading);
+            } else {
+                mAuthorText.setText("");
+                mTitleText.setText(R.string.no_search_term);
+            }
+        } else {
+            mAuthorText.setText("");
+            mTitleText.setText(R.string.no_network);
+        }
     }
 }
